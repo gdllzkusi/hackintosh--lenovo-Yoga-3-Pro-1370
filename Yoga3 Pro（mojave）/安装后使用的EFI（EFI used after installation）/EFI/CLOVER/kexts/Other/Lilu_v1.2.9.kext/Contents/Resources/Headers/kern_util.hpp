@@ -10,6 +10,7 @@
 
 #include <Headers/kern_config.hpp>
 #include <Headers/kern_compat.hpp>
+#include <Headers/kern_atomic.hpp>
 
 #include <libkern/libkern.h>
 #include <libkern/OSDebug.h>
@@ -563,6 +564,108 @@ struct Page {
 	 *  Page buffer
 	 */
 	uint8_t *p {nullptr};
+};
+
+/**
+ *  Thread specific container of T values in up to N threads
+ */
+template <typename T, size_t N>
+class ThreadLocal {
+	/**
+	 *  A list of tread identifiers
+	 */
+	_Atomic(thread_t) threads[N];
+
+	/**
+	 *  A list of value references
+	 */
+	T values[N] {};
+
+public:
+	/**
+	 *  Initialise storage
+	 *
+	 *  @return true on success
+	 */
+	void init() {
+		for (auto &thread : threads)
+			atomic_init(&thread, nullptr);
+	}
+
+	/**
+	 *  Deinitialise storage
+	 */
+	void deinit() {
+		for (size_t i = 0; i < N; i++) {
+			atomic_store_explicit(&threads[i], nullptr, memory_order_relaxed);
+			values[i] = {};
+		}
+	}
+
+	/**
+	 *  Set or overwrite thread specific value
+	 *
+	 *  @param value  value to store
+	 *
+	 *  @return true on success
+	 */
+	bool set(T value) {
+		auto currThread = current_thread();
+		T *ptr = nullptr;
+
+		// Find previous value if any
+		for (size_t i = 0; ptr == nullptr && i < N; i++)
+			if (atomic_load_explicit(&threads[i], memory_order_acquire) == currThread)
+				ptr = &values[i];
+
+		// Find null value if any
+		for (size_t i = 0; ptr == nullptr && i < N; i++) {
+			thread_t nullThread = nullptr;
+			if (atomic_compare_exchange_strong_explicit(&threads[i], &nullThread, currThread,
+				memory_order_acq_rel, memory_order_acq_rel))
+				ptr = &values[i];
+		}
+
+		// Insert if we can
+		if (ptr) *ptr = value;
+
+		return ptr != nullptr;
+	}
+
+	/**
+	 *  Get thread specific value
+	 *
+	 *  @return pointer to stored value on success
+	 */
+	T *get() {
+		auto currThread = current_thread();
+
+		for (size_t i = 0; i < N; i++)
+			if (atomic_load_explicit(&threads[i], memory_order_acquire) == currThread)
+				return &values[i];
+
+		return nullptr;
+	}
+
+	/**
+	 *  Unset thread specific value if present
+	 *
+	 *  @return true on success
+	 */
+	bool erase() {
+		auto currThread = current_thread();
+
+		for (size_t i = 0; i < N; i++) {
+			if (atomic_load_explicit(&threads[i], memory_order_acquire) == currThread) {
+				values[i] = {};
+				thread_t nullThread = nullptr;
+				return atomic_compare_exchange_strong_explicit(&threads[i], &currThread,
+					nullThread, memory_order_acq_rel, memory_order_acq_rel);
+			}
+		}
+
+		return false;
+	}
 };
 
 /**
