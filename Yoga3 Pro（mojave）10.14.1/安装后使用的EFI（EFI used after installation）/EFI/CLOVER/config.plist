@@ -359,7 +359,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-lilubeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -alcbeta</string>
+		<string>-alcbeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -lilubeta</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -645,8 +645,6 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>DualLink</key>
-		<integer>0</integer>
 		<key>EDID</key>
 		<dict>
 			<key>Custom</key>
