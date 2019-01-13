@@ -355,13 +355,18 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-alcbeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -lilubeta</string>
+		<string>-lilubeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -alcbeta</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
 		<integer>5</integer>
+	</dict>
+	<key>BootGraphics</key>
+	<dict>
+		<key>UIScale</key>
+		<integer>2</integer>
 	</dict>
 	<key>Comment</key>
 	<string>This file is for Broadwell graphics that are natively supported</string>
