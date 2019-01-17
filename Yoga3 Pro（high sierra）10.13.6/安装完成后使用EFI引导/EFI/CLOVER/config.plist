@@ -331,6 +331,34 @@
 					WEhDXw==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _Q38 to XQ38</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1EzOA==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFEzOA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _Q39 to XQ39</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1EzOQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFEzOQ==
+					</data>
+				</dict>
 			</array>
 			<key>SlpSmiAtWake</key>
 			<false/>
@@ -359,7 +387,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-alcbeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -lilubeta</string>
+		<string>-lilubeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -alcbeta</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
