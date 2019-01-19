@@ -387,7 +387,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-lilubeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -alcbeta</string>
+		<string>dart=0 nv_disable=1 -alcbeta -cdfon debug=0x100 kext-dev-mode=1 -lilubeta</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
