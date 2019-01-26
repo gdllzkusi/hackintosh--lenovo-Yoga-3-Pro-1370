@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Comment</key>
+		<string>All analog audio</string>
+		<key>Detect</key>
+		<true/>
+		<key>Tree</key>
+		<array>
+			<string>AppleACPIPCI</string>
+			<string>HDEF</string>
+			<string>AppleHDAController</string>
+			<string>IOHDACodecDevice</string>
+		</array>
+		<key>controllerNum</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>Comment</key>
+		<string>Skylake 9D70 Controller</string>
+		<key>Detect</key>
+		<true/>
+		<key>Tree</key>
+		<array>
+			<string>AppleACPIPCI</string>
+			<string>HDEF</string>
+			<string>AppleHDA8086_9D70Controller</string>
+			<string>IOHDACodecDevice</string>
+		</array>
+		<key>controllerNum</key>
+		<integer>1</integer>
+	</dict>
+</array>
+</plist>

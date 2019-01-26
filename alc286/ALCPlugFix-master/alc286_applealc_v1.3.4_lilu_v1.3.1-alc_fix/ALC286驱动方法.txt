@@ -1,0 +1,4 @@
+clover注入LayoutID  11
+lilu.kext applealc.kext放置EFI/CLOVER/KEXT/OTHER 目录下
+终端cd到alc_fix目录，执行 ./install.sh
+耳机就可以自动切换了
