@@ -812,8 +812,6 @@
 		<string>Mac-BE0E8AC46FE800CC</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C02504101GUFV36JA</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -840,10 +838,6 @@
 		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBook8,1</string>
-		<key>SerialNumber</key>
-		<string>C02P55YSGCN3</string>
-		<key>SmUUID</key>
-		<string>DD742FC3-014C-5A56-B6C1-1DF8EA42C108</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
