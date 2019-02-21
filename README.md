@@ -1,53 +1,102 @@
 # Lenovo Yoga3 Pro **黑苹果安装**
 
-## 一、机型配置如下    
-  *  机型：Lenovo Yoga3 Pro  
-  *  CPU：Intel Core M 5Y71  
-  *  内存：8G DDR3 1600  
-  *  硬盘：三星PM871 256G  
-  *  核显：HD5300, 3200x1800  
-  *  声卡：Realtek ALC286  
-  *  无线网卡：bcm94352hmz  
-  *  BIOS：A6CN58WW  
+## 一、机型配置    
 
-## 二、工作情况    
-  *  显卡HD5300：（亮度调整正常）注入 ig-platform-id 0x16260006  
-  *  声卡ALC286：（扬声器、耳机切换，内置麦克风正常）注入ID11
-  *  触摸板（syna 2B22触摸板）  
-  *  fn热键（+上下键调整亮度、+左右键调整声音）  
-  *  休眠唤醒（睡眠一晚上掉电2%很完美）  
-  *  usb（2.0/3.0正常识别，并且内建内置usb设备）  
-  *  蓝牙+WiFi（原机自带联想版bcm94352z）  
-  *  摄像头（免驱）  
-  *  HDMI输出（hdmi声音输出尚无测试）   
+|项目|信息|
+|:-----:|-----|
+|版本信息|Lenovo YOGA 3 Pro-1370/BIOS:A6CN58WW|
+|操作系统|Mojave 10.14.3/High Sierra 10.13.6|
+|CPU信息|Mobile DualCore Intel Core M-5Y71, 2600 MHz (26 x 100)|
+|显示屏幕|Samsung LTN133YL03L01  [13.3" LCD] 3200x1800|
+|主板芯片组|Intel Wildcat Point-LP, Intel|
+|内存信息|8192MB  (DDR3 SDRAM)|
+|显卡信息|Intel(R) HD Graphics 5300(platform-id:0x16260006)|
+|硬盘信息|LITEON LGH-512V2G-11 M.2 2280 512GB  (476 GB)|
+|网卡信息|Broadcom Bcm94352z|
+|声卡信息|Realtek ALC286@ AppleALC layout-id:11|
+|触摸设备|i2c触摸板SYNA2B22/i2c触摸屏ATML1000|
+|HDMI输出|Intel Broadwell HDMI视屏音频|
 
-## 三、安装方法    
-  1.  更新官网最新版bios（A6CN58ww），UEFI MODE 模式改为Legacy Support  
-  2.  下载镜像使用用transmac将镜像刻录到U盘  
-  3.  使用我的安装系统使用的EFI（install-EFI）安装系统（无驱动，安装减少报错）   
-  4.  安装完成后，kext utility 软件重建缓存  
-  5.  使用安装后使用的EFI（安装后使用的EFI）目录下的EFI引导开机   
-  6.  详细安装过程请参考 daliansky 写的安装教程
+
+## 二、硬件驱动方法     
+
+|设备|驱动方法|
+|:-----:|-----|
+|HD5300|使用[WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen) 注入ig-platform-id 0x16260006|
+|ALC286|使用[AppleALC.kext](https://github.com/acidanthera/AppleALC) 注入 layout-id:11 和 [CodecCommander.kext](https://github.com/RehabMan/EAPD-Codec-Commander) |
+|触摸板|使用核心驱动[VoodooI2C.kext](https://github.com/alexandred/VoodooI2C)+目标驱动VoodooI2CSynaptics.kext(需要修改IOPropertyMatch 为2B22)|
+|触摸屏|使用核心驱动[VoodooI2C.kext](https://github.com/alexandred/VoodooI2C)+目标驱动VoodooI2CHID.kext|
+|usb设备|使用[OS-X-USB-Inject-All](https://github.com/RehabMan/OS-X-USB-Inject-All) +[SSDT-UIAC-ALL.aml](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/Yoga3%20Pro%EF%BC%88high%20sierra%EF%BC%8910.13.6/%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E4%BD%BF%E7%94%A8EFI%E5%BC%95%E5%AF%BC/EFI/CLOVER/ACPI/patched/SSDT-UIAC-ALL.aml)|
+|FN热键|[SSDT-BrightKeyQ38Q39-lenovo.aml](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/Yoga3%20Pro%EF%BC%88high%20sierra%EF%BC%8910.13.6/%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E4%BD%BF%E7%94%A8EFI%E5%BC%95%E5%AF%BC/EFI/CLOVER/ACPI/patched/SSDT-BrightKeyQ38Q39-lenovo.aml)|
+|蓝牙WIFI|WIFI使用[SSDT-ARPT.aml](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/Yoga3%20Pro%EF%BC%88high%20sierra%EF%BC%8910.13.6/%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E4%BD%BF%E7%94%A8EFI%E5%BC%95%E5%AF%BC/EFI/CLOVER/ACPI/patched/SSDT-ARPT.aml ) [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)  蓝牙使用[BrcmPatchRAM2.kext+BrcmFirmwareData.kext)](https://github.com/RehabMan/OS-X-BrcmPatchRAM) |
+|Apple SMC仿真器|[Lilu](https://github.com/acidanthera/Lilu) 和 [VirtualSMC](https://github.com/acidanthera/VirtualSMC) 或者使用[OS-X-FakeSMC-kozlek](https://github.com/RehabMan/OS-X-FakeSMC-kozlek) 二选一|
+|电源管理|[Lilu](https://github.com/acidanthera/Lilu) 和 [VirtualSMC](https://github.com/acidanthera/VirtualSMC) 或者使用 [ACPIBatteryManager.kext](https://github.com/RehabMan/OS-X-ACPI-Battery-Driver) 二选一|
+
+## 三、bios设置  
+     *  – Secure Boot → disable  
+     *  – Boot MODE → Legacy Support   
+     *  – Boot Priority → UEFI First  
+     *  –  Intel Virtual Technology → enabled  
+     *  – DPTF  → disable   
+   
+## 四、安装方法    
+  1.  下载镜像使用用transmac将镜像刻录到U盘  
+  2.  使用我的安装系统使用的EFI（install-EFI）安装系统（无驱动，安装减少报错）   
+  3.  安装完成后，kext utility 软件 或者 终端.app 输入 sudo kextcache -i / 重建缓存后重启电脑  
+  4.  使用安装后使用的EFI（安装后使用的EFI）目录下的EFI引导开机   
+  5.  详细安装过程请参考 daliansky 写的安装教程   
  [联想小新Air 13黑苹果安装教程](https://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)
 
-## 三、备注：     
-   *  每个版本都有两个引导，一个安装系统使用，一个是安装系统完成后 重建缓存 更换安装后EFI引导  （重建缓存使用kext utility软件，打开后输入密码，等待重建缓存完成后退出，更换安装后EFI引导）  
+## 五、运行截图  
 
-   *  目前有10.13.6、10.14.3 版本可以用   
+![10.14.3](./screenshot/关于本机.png)
 
+![HD5300](./screenshot/显卡.png)
 
-#### 安装完成后触摸板不能使用的方法   
+![a0.声卡](./screenshot/声卡.png)
+
+![a5.USB](./screenshot/usb.png)
+
+![a6.WIFI](./screenshot/wifi.png)
+
+![a7.Memory](./screenshot/内存.png)
+
+![a8.Battery](./screenshot/电源.png)
+
+![a9.Bluetooth](./screenshot/蓝牙.png)
+
+![b1.硬盘](./screenshot/硬盘.png)
+
+![b2.触摸板](./screenshot/触摸板.png)
+
+![bios-information](./screenshot/bios-information.jpeg)
+
+![bios-configuration](./screenshot/bios-configuration.jpeg)
+
+![bios-boot](./screenshot/bios-boot.jpeg)
+
+![KEXT](./screenshot/KEXT.png)
+
+![drivers64UEFI](./screenshot/drivers64UEFI.png)
+
+## 六、备注：     
+
+*  每个版本都有两个引导，一个安装系统使用，一个是安装系统完成后 重建缓存 更换安装后EFI引导  （重建缓存使用kext utility软件，打开后输入密码，等待重建缓存完成后退出，更换安装后EFI引导）  
+## 安装完成后触摸板不能使用的方法   
   *  打开访达→左上角选择前往→前往文件夹 进入 /System/Library/Extensions 目录下删除  AppleIntelLpssI2C.kext / AppleIntelLpssI2CController.kext两个文件，重建缓存后重启    
 
 ## 有问题反馈
-  *  在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
-
+*  在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 * 邮件(gdllzkusi@gmail.com)
 * QQ: 374593607  
+* 如果您认可我的工作，请通过打赏支持我后续的更新
 
-## 感激
-   * 感谢以下的大神,排名不分先后
-   * 感谢daliansky 帮忙定制applealc声卡驱动  
-   * 感谢penghubingzhou 帮忙解决syna触摸板无手势功能  
-   * 感谢acidanthera、RehabMan、vit9696 等等大神做出来的q以及出了n多教程的大神前辈们  
+* ![b2.触摸板](./screenshot/Alipay.jpeg)
+## 感谢  
+
+- [RehabMan](https://github.com/RehabMan) 提供 [AppleBacklightInjector](https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/tree/master/kexts/AppleBacklightInjector.kext) 和 [EAPD-Codec-Commander](https://github.com/RehabMan/EAPD-Codec-Commander) 和 [OS-X-ACPI-Battery-Driver](https://github.com/RehabMan/OS-X-ACPI-Battery-Driver) 和 [OS-X-Clover-Laptop-Config](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) 和 [OS-X-FakeSMC-kozlek](https://github.com/RehabMan/OS-X-FakeSMC-kozlek) 和 [OS-X-USB-Inject-All](https://github.com/RehabMan/OS-X-USB-Inject-All) 和 [OS-X-Voodoo-PS2-Controller](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller) 和 [OS-X-BrcmPatchRAM)](https://github.com/RehabMan/OS-X-BrcmPatchRAM) 的维护
+- [vit9696](https://github.com/vit9696) 提供 [Lilu](https://github.com/acidanthera/Lilu) 和 [AppleALC](https://github.com/acidanthera/AppleALC) 和 [WhateverGreen](https://github.com/acidanthera/WhateverGreen) 和 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)  和 [VirtualSMC](https://github.com/acidanthera/VirtualSMC) 的维护
+- [alexandred](https://github.com/alexandred) 和 [hieplpvip](https://github.com/hieplpvip) 提供 [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup) 的维护
+- [daliansky](https://github.com/daliansky) 和 [penghubingzhou](https://github.com/penghubingzhou) 和 [limurphy](http://i.pcbeta.com/space-uid-2163032.html) 的宝贵建议
+
 
