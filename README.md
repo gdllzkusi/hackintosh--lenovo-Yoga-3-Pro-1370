@@ -1,5 +1,6 @@
 # Lenovo Yoga3 Pro **黑苹果安装**
-
+## 前言
+#### 安装黑苹果有风险，对于本指南中出现的任何变砖，系统崩溃，冻结，故障，损坏或其他问题，本人不承担任何责任。这样做需要您自担风险。 请认真了解hackintosh相关资料后进行安装操作。  
 ## 一、机型配置    
 
 |项目|信息|
@@ -44,9 +45,20 @@
   2.  使用我的安装系统使用的EFI（install-EFI）安装系统（无驱动，安装减少报错）   
   3.  安装完成后，kext utility 软件 或者 终端.app 输入 sudo kextcache -i / 重建缓存后重启电脑  
   4.  使用安装后使用的EFI（安装后使用的EFI）目录下的EFI引导开机   
-  5.  详细安装过程请参考 daliansky 写的安装教程   
+  5.  此时安装完成系统之后，还存在耳机麦克风切换不正常的问题，下载  [ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip)  打开ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix/ALCPlugFix/目录下双击 install双击自动安装.command 文件 提示输入密码后回车，重启即可。
+  6.  详细安装过程请参考 daliansky 写的安装教程   
  [联想小新Air 13黑苹果安装教程](https://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)
-
+ 7.  clover生成自己的SN码；  
+     *  使用clover configuration挂载EFI分区  
+  ![挂载efi分区](./screenshot/挂载efi分区.png)
+     *  使用clover configuration打开EFI/CLOVER/目录下的config.plist文件  
+ ![clover打开config](./screenshot/clover打开config.png)
+     *   获取UUID  
+ ![获取uuid](./screenshot/获取uuid.png)
+     *  粘贴UUID  
+ ![粘贴uuid](./screenshot/粘贴uuid.png)
+     *  生成自己的SN 
+ ![生成sn](./screenshot/生成sn.png)
 ## 五、运行截图  
 
 ![10.14.3](./screenshot/关于本机.png)

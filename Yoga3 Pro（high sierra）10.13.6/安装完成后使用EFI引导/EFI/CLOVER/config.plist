@@ -387,7 +387,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-alcbeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -lilubeta</string>
+		<string>-lilubeta nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -alcbeta</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -812,6 +812,8 @@
 		<string>Mac-BE0E8AC46FE800CC</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>C02627700CDFV36A8</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -838,6 +840,10 @@
 		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBook8,1</string>
+		<key>SerialNumber</key>
+		<string>C02S1NZ0GCN3</string>
+		<key>SmUUID</key>
+		<string>DD742FC3-014C-5A56-B6C1-1DF8EA42C108</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
