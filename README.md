@@ -43,10 +43,10 @@
      *  – DPTF  → disable   
    
 ## 四、安装方法    
-  1.  下载镜像使用用transmac将镜像刻录到U盘  
-  2.  使用我的安装系统使用的EFI（install-EFI）安装系统（无驱动，安装减少报错）   
-  3.  安装完成后，kext utility 软件 或者 终端.app 输入 sudo kextcache -i / 重建缓存后重启电脑  
-  4.  使用安装后使用的EFI（安装后使用的EFI）目录下的EFI引导开机   
+  1.  下载[系统镜像)](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) 使用用[TransMac)](http://7dx.pc6.com/wwb5/TransMac114.zip) 将镜像刻录到U盘  
+  2.  使用我的 安装系统使用的EFI（install-EFI）安装系统（无驱动，安装减少报错）   
+  3.  安装完成后，kext utility 软件 或者  终端  输入 sudo kextcache -i / 重建缓存后重启电脑  
+  4.  使用 安装后使用的EFI（安装后使用的EFI）目录下的EFI引导开机   
   5.  此时安装完成系统之后，还存在耳机麦克风切换不正常的问题，下载  [ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip)  打开ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix/ALCPlugFix/目录下双击 install双击自动安装.command 文件 提示输入密码后回车，重启即可。
   6.  详细安装过程请参考 daliansky 写的安装教程   
  [联想小新Air 13黑苹果安装教程](https://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)
