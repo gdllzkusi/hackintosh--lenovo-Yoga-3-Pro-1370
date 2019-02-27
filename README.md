@@ -72,7 +72,6 @@
  *  打开访达→左上角选择前往→前往文件夹 进入 /System/Library/Extensions 目录下删除  AppleIntelLpssI2C.kext / AppleIntelLpssI2CController.kext两个文件，重建缓存后重启，syna的目标驱动现在有个bug，就是如果进入了Windows系统，然后再进去mac系统将会不能使用触摸板，唯一解决方法就是多重启两次mac系统。该bug等待以后驱动作者更新版本解决。      
 
 ## 五、运行截图  
-|:-----:|-----|
 |![10.14.3](./screenshot/关于本机.png)|![HD5300](./screenshot/显卡.png)|
 |![a0.声卡](./screenshot/声卡.png)|![a5.USB](./screenshot/usb.png)|
 |![a6.WIFI](./screenshot/wifi.png)|![a6.WIFI](./screenshot/wifi.png)|
@@ -87,9 +86,7 @@
 * 邮件(gdllzkusi@gmail.com)
 * QQ: 374593607  QQ群：778791091
 * 如果您认可我的工作，请通过打赏支持我后续的更新
-|支付宝|微信|
-|:-----:|-----|
-| ![Alipay](./screenshot/Alipay.jpeg)| ![Alipay](./screenshot/WeChat.jpeg)|
+![Alipay](./screenshot/Alipay.jpeg)
 ## 感谢  
 
 - [RehabMan](https://github.com/RehabMan) 提供 [AppleBacklightInjector](https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/tree/master/kexts/AppleBacklightInjector.kext) 和 [EAPD-Codec-Commander](https://github.com/RehabMan/EAPD-Codec-Commander) 和 [OS-X-ACPI-Battery-Driver](https://github.com/RehabMan/OS-X-ACPI-Battery-Driver) 和 [OS-X-Clover-Laptop-Config](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) 和 [OS-X-FakeSMC-kozlek](https://github.com/RehabMan/OS-X-FakeSMC-kozlek) 和 [OS-X-USB-Inject-All](https://github.com/RehabMan/OS-X-USB-Inject-All) 和 [OS-X-Voodoo-PS2-Controller](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller) 和 [OS-X-BrcmPatchRAM)](https://github.com/RehabMan/OS-X-BrcmPatchRAM) 的维护
