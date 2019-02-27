@@ -46,10 +46,10 @@
   1.  下载[系统镜像)](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) 使用用[TransMac)](http://7dx.pc6.com/wwb5/TransMac114.zip) 将镜像刻录到U盘  
   2.  使用我的 安装系统使用的EFI（install-EFI）安装系统（无驱动，安装减少报错）   
   4.  第一次使用U盘进去在CLOVER引导界面选择“Boot macOS Install from Install macOS Mojave”安装盘按回车键开始安装，等待跑码结束后进去语言选择界面、然后到 磁盘工具 把你需要安装的硬盘分区 抹除成为APFS格式 名称随便填，抹掉磁盘完成之后回到macOS使用工具界面，选择安装macOS到你刚才抹除的apfs分区。  
-  5.  安装过程大概3-5分钟左右，如果你用的不是USB3.0的U盘，那等待时间更多，这个过程主要是把U盘里面的文件拷贝的刚才分区好的硬盘，此时电脑会自动重启，然后选择“Boot macOS Install from MACOS”进行第二阶段安装，注意的是第二阶段安装需要重启两到三次，后面都是选择 “Boot macOS Install from MACOS” 这个选项  
-  6.  安装完成后，kext utility 软件 或者  终端  输入 sudo kextcache -i / 重建缓存后重启电脑  
-  7.  使用 安装后使用的EFI（安装后使用的EFI）目录下的EFI引导开机   
-  8.  此时安装完成系统之后，还存在耳机麦克风切换不正常的问题，下载  [ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip)  打开ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix/ALCPlugFix/目录下双击 install双击自动安装.command 文件 提示输入密码后回车，重启即可。
+  5.  安装过程大概3-5分钟左右，如果你用的不是USB3.0的U盘，那等待时间更多，这个过程主要是把U盘里面的文件拷贝的刚才分区好的硬盘，此时电脑会自动重启，然后选择“Boot macOS Install from MACOS”进行第二阶段安装，注意的是第二阶段安装需要重启两到三次，后面都是选择 “Boot macOS Install from MACOS” 这个选项   
+  6.  安装完成后，kext utility 软件 或者  终端  输入 sudo kextcache -i / 重建缓存后关机      
+  7.  使用 安装后使用的EFI（安装后使用的EFI）目录下的EFI引导开机进mac      
+  8.  此时安装完成系统之后各项驱动已经正常，（如果触摸板无法工作的请查看页面底部最下面说明，触摸板还需要删除两个系统内自带的kext驱动），还存在耳机麦克风切换不正常的问题，下载  [ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip)  打开ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix/ALCPlugFix/目录下双击 install双击自动安装.command 文件 提示输入密码后回车，重启即可。
   9.  详细安装过程请参考 daliansky 写的安装教程   
  [联想小新Air 13黑苹果安装教程](https://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)
 10.  clover生成自己的SN码；  
@@ -63,51 +63,33 @@
  ![粘贴uuid](./screenshot/粘贴uuid.png)
      *  生成自己的SN 
  ![生成sn](./screenshot/生成sn.png)
+ 
+ ## 备注：     
+ 
+ *  每个版本都有两个引导，一个安装系统使用，一个是安装系统完成后 重建缓存 更换安装后EFI引导  （重建缓存使用kext utility软件，打开后输入密码，等待重建缓存完成后退出，更换安装后EFI引导）  
+ *  如果不识别U盘，请插USB2.0接口（也就是电源口那个usb口）或者检查U盘根目录架构是否是符合EFI读取的要求，如果不懂，请百度 “EFI引导” 。  
+ ## 安装完成后触摸板不能使用的方法   
+ *  打开访达→左上角选择前往→前往文件夹 进入 /System/Library/Extensions 目录下删除  AppleIntelLpssI2C.kext / AppleIntelLpssI2CController.kext两个文件，重建缓存后重启，syna的目标驱动现在有个bug，就是如果进入了Windows系统，然后再进去mac系统将会不能使用触摸板，唯一解决方法就是多重启两次mac系统。该bug等待以后驱动作者更新版本解决。      
+
 ## 五、运行截图  
-
-![10.14.3](./screenshot/关于本机.png)
-
-![HD5300](./screenshot/显卡.png)
-
-![a0.声卡](./screenshot/声卡.png)
-
-![a5.USB](./screenshot/usb.png)
-
-![a6.WIFI](./screenshot/wifi.png)
-
-![a7.Memory](./screenshot/内存.png)
-
-![a8.Battery](./screenshot/电源.png)
-
-![a9.Bluetooth](./screenshot/蓝牙.png)
-
-![b1.硬盘](./screenshot/硬盘.png)
-
-![b2.触摸板](./screenshot/触摸板.png)
-
-![bios-information](./screenshot/bios-information.jpeg)
-
-![bios-configuration](./screenshot/bios-configuration.jpeg)
-
-![bios-boot](./screenshot/bios-boot.jpeg)
-
-![KEXT](./screenshot/KEXT.png)
-
-![drivers64UEFI](./screenshot/drivers64UEFI.png)
-
-## 六、备注：     
-
-*  每个版本都有两个引导，一个安装系统使用，一个是安装系统完成后 重建缓存 更换安装后EFI引导  （重建缓存使用kext utility软件，打开后输入密码，等待重建缓存完成后退出，更换安装后EFI引导）  
-## 安装完成后触摸板不能使用的方法   
-  *  打开访达→左上角选择前往→前往文件夹 进入 /System/Library/Extensions 目录下删除  AppleIntelLpssI2C.kext / AppleIntelLpssI2CController.kext两个文件，重建缓存后重启    
+|:-----:|-----|
+|![10.14.3](./screenshot/关于本机.png)|![HD5300](./screenshot/显卡.png)|
+|![a0.声卡](./screenshot/声卡.png)|![a5.USB](./screenshot/usb.png)|
+|![a6.WIFI](./screenshot/wifi.png)|![a6.WIFI](./screenshot/wifi.png)|
+|![a7.Memory](./screenshot/内存.png)|![a8.Battery](./screenshot/电源.png)|
+|![a9.Bluetooth](./screenshot/蓝牙.png)|![b1.硬盘](./screenshot/硬盘.png)|
+|![b2.触摸板](./screenshot/触摸板.png)|![bios-information](./screenshot/bios-information.jpeg)|
+|![bios-configuration](./screenshot/bios-configuration.jpeg)|![bios-boot](./screenshot/bios-boot.jpeg)|
+|![KEXT](./screenshot/KEXT.png)|![drivers64UEFI](./screenshot/drivers64UEFI.png)|
 
 ## 有问题反馈
 *  在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 * 邮件(gdllzkusi@gmail.com)
 * QQ: 374593607  QQ群：778791091
 * 如果您认可我的工作，请通过打赏支持我后续的更新
-
-* ![b2.触摸板](./screenshot/Alipay.jpeg)
+|支付宝|微信|
+|:-----:|-----|
+| ![Alipay](./screenshot/Alipay.jpeg)| ![Alipay](./screenshot/WeChat.jpeg)|
 ## 感谢  
 
 - [RehabMan](https://github.com/RehabMan) 提供 [AppleBacklightInjector](https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/tree/master/kexts/AppleBacklightInjector.kext) 和 [EAPD-Codec-Commander](https://github.com/RehabMan/EAPD-Codec-Commander) 和 [OS-X-ACPI-Battery-Driver](https://github.com/RehabMan/OS-X-ACPI-Battery-Driver) 和 [OS-X-Clover-Laptop-Config](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) 和 [OS-X-FakeSMC-kozlek](https://github.com/RehabMan/OS-X-FakeSMC-kozlek) 和 [OS-X-USB-Inject-All](https://github.com/RehabMan/OS-X-USB-Inject-All) 和 [OS-X-Voodoo-PS2-Controller](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller) 和 [OS-X-BrcmPatchRAM)](https://github.com/RehabMan/OS-X-BrcmPatchRAM) 的维护
