@@ -52,26 +52,36 @@
   8.  此时安装完成系统之后各项驱动已经正常，（如果触摸板无法工作的请查看页面底部最下面说明，触摸板还需要删除两个系统内自带的kext驱动），还存在耳机麦克风切换不正常的问题，下载  [ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip)  打开ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix/ALCPlugFix/目录下双击 install双击自动安装.command 文件 提示输入密码后回车，重启即可。
   9.  详细安装过程请参考 daliansky 写的安装教程   
  [联想小新Air 13黑苹果安装教程](https://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)
-10.  clover生成自己的SN码；  
-     *  使用clover configuration挂载EFI分区  
-  ![挂载efi分区](./screenshot/挂载efi分区.png)
-     *  使用clover configuration打开EFI/CLOVER/目录下的config.plist文件  
+ 
+ 关于EFI替换的相关问题：
+ 
+ 1. 如果电脑本身有Windows系统，则推荐创建双EFI分区，使用[DiskGenius](http://www.upantool.com/qidong/2012/DiskGenius_3.7.1.html)工具，在需要安装MacOS的磁盘NTFS分区前面拆分出一个220M大小的分区（为什么是220M？当然是好认啊），并且格式化为EFI system partition，此分区就是EFI的启动分区。上述安装用的EFI分区可以直接放置到此目录。这样带来的好处是：U盘随意插在哪个USB接口，只要启动时，按F12，选择对应的启动项（一般是UEFI啥啥啥+你的硬盘名字，反正不是Windows啥啥啥和啥啥啥+你U盘的名字，注意区分），即可进入clover界面，按照上述步骤安装即可。安装完成并且重建缓存以后，可以直接用CCG工具（clover configuration）挂载EFI分区，然后将里面的EFI文件夹删掉，放入  安装后使用的EFI  即可。
+ 2. 如果电脑本身没有系统，或者只想用单系统。可以直接使用PE把安装用EFI复制到原来的EFI分区即可。具体步骤不再赘述。
+ 3. 除了上述方案，还可以使用[DiskGenius](http://www.upantool.com/qidong/2012/DiskGenius_3.7.1.html)工具，将安装用EFI替换到写好的U盘的EFI分区。这样需要考虑是否使用双EFI分区方案。如果不使用并且希望是双系统，则需要在Windows下添加clover启动项。如果使用则按照上述方法分区。
+ 
+  关于触摸板的相关问题：  
+  1.打开访达→左上角选择前往→前往文件夹 进入 /System/Library/Extensions 目录下删除  AppleIntelLpssI2C.kext / AppleIntelLpssI2CController.kext两个文件，重建缓存后重启，syna的目标驱动现在有个bug，就是如果进入了Windows系统，然后再进去mac系统将会不能使用触摸板，唯一解决方法就是多重启两次mac系统。该bug等待以后驱动作者更新版本解决。    
+  
+  ## 备注：     
+  
+  *  每个版本都有两个引导，一个安装系统使用，一个是安装系统完成后 重建缓存 更换安装后EFI引导  （重建缓存使用kext utility软件，打开后输入密码，等待重建缓存完成后退出，更换安装后EFI引导）  
+  *  如果不识别U盘，请插USB2.0接口（也就是电源口那个usb口）或者检查U盘根目录架构是否是符合EFI读取的要求，如果不懂，请百度 “EFI引导” 。  
+
+
+## 五、使用clover configuration 生成自己的SN码；  
+    *它的目的是让你的黑苹果洗白。
+1、使用clover configuration挂载EFI分区  
+  ![挂载efi分区](./screenshot/挂载efi分区.png)  
+2、使用clover configuration打开EFI/CLOVER/目录下的config.plist文件   
  ![clover打开config](./screenshot/clover打开config.png)
-     *   获取UUID  
+3、获取UUID  
  ![获取uuid](./screenshot/获取uuid.png)
-     *  粘贴UUID  
+4、粘贴UUID  
  ![粘贴uuid](./screenshot/粘贴uuid.png)
-     *  生成自己的SN 
+5、生成自己的SN  
  ![生成sn](./screenshot/生成sn.png)
  
- ## 备注：     
- 
- *  每个版本都有两个引导，一个安装系统使用，一个是安装系统完成后 重建缓存 更换安装后EFI引导  （重建缓存使用kext utility软件，打开后输入密码，等待重建缓存完成后退出，更换安装后EFI引导）  
- *  如果不识别U盘，请插USB2.0接口（也就是电源口那个usb口）或者检查U盘根目录架构是否是符合EFI读取的要求，如果不懂，请百度 “EFI引导” 。  
- ## 安装完成后触摸板不能使用的方法   
- *  打开访达→左上角选择前往→前往文件夹 进入 /System/Library/Extensions 目录下删除  AppleIntelLpssI2C.kext / AppleIntelLpssI2CController.kext两个文件，重建缓存后重启，syna的目标驱动现在有个bug，就是如果进入了Windows系统，然后再进去mac系统将会不能使用触摸板，唯一解决方法就是多重启两次mac系统。该bug等待以后驱动作者更新版本解决。      
-
-## 五、运行截图  
+## 六、运行截图  
 |![10.14.3](./screenshot/关于本机.png)|![HD5300](./screenshot/显卡.png)|
 |![a0.声卡](./screenshot/声卡.png)|![a5.USB](./screenshot/usb.png)|
 |![a6.WIFI](./screenshot/wifi.png)|![a6.WIFI](./screenshot/wifi.png)|
