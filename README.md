@@ -38,7 +38,7 @@
 ## 三、bios设置  
      *  – Secure Boot → disable  
      *  – Boot MODE → Legacy Support   
-     *  – Boot Priority → UEFI First  
+     *  – Boot MODE → Legacy Support 
      *  –  Intel Virtual Technology → enabled  
      *  – DPTF  → disable   
    
