@@ -51,13 +51,7 @@
   7.  使用 安装后使用的EFI（安装后使用的EFI）目录下的EFI引导开机进mac      
   8.  此时安装完成系统之后各项驱动已经正常，（如果触摸板无法工作的请查看页面底部最下面说明，触摸板还需要删除两个系统内自带的kext驱动），还存在耳机麦克风切换不正常的问题，下载  [ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/blob/master/ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix.zip)  打开ALC286v1.3.5_Liluv1.3.3_CC_ALCPlugfix/ALCPlugFix/目录下双击 install双击自动安装.command 文件 提示输入密码后回车，重启即可。
   9.  详细安装过程请参考 daliansky 写的安装教程   
- [联想小新Air 13黑苹果安装教程](https://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)
- 
- 关于EFI替换的相关问题：
- 
- 1. 如果电脑本身有Windows系统，则推荐创建双EFI分区，使用[DiskGenius](http://www.upantool.com/qidong/2012/DiskGenius_3.7.1.html)工具，在需要安装MacOS的磁盘NTFS分区前面拆分出一个220M大小的分区（为什么是220M？当然是好认啊），并且格式化为EFI system partition，此分区就是EFI的启动分区。上述安装用的EFI分区可以直接放置到此目录。这样带来的好处是：U盘随意插在哪个USB接口，只要启动时，按F12，选择对应的启动项（一般是UEFI啥啥啥+你的硬盘名字，反正不是Windows啥啥啥和啥啥啥+你U盘的名字，注意区分），即可进入clover界面，按照上述步骤安装即可。安装完成并且重建缓存以后，可以直接用CCG工具（clover configuration）挂载EFI分区，然后将里面的EFI文件夹删掉，放入  安装后使用的EFI  即可。
- 2. 如果电脑本身没有系统，或者只想用单系统。可以直接使用PE把安装用EFI复制到原来的EFI分区即可。具体步骤不再赘述。
- 3. 除了上述方案，还可以使用[DiskGenius](http://www.upantool.com/qidong/2012/DiskGenius_3.7.1.html)工具，将安装用EFI替换到写好的U盘的EFI分区。这样需要考虑是否使用双EFI分区方案。如果不使用并且希望是双系统，则需要在Windows下添加clover启动项。如果使用则按照上述方法分区。
+ [联想小新Air 13黑苹果安装教程](https://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)  
  
   关于触摸板的相关问题：  
   1.打开访达→左上角选择前往→前往文件夹 进入 /System/Library/Extensions 目录下删除  AppleIntelLpssI2C.kext / AppleIntelLpssI2CController.kext两个文件，重建缓存后重启，syna的目标驱动现在有个bug，就是如果进入了Windows系统，然后再进去mac系统将会不能使用触摸板，唯一解决方法就是多重启两次mac系统。该bug等待以后驱动作者更新版本解决。    
@@ -81,15 +75,6 @@
 5、生成自己的SN  
  ![生成sn](./screenshot/生成sn.png)
  
-## 六、运行截图  
-|![10.14.3](./screenshot/关于本机.png)|![HD5300](./screenshot/显卡.png)|
-|![a0.声卡](./screenshot/声卡.png)|![a5.USB](./screenshot/usb.png)|
-|![a6.WIFI](./screenshot/wifi.png)|![a6.WIFI](./screenshot/wifi.png)|
-|![a7.Memory](./screenshot/内存.png)|![a8.Battery](./screenshot/电源.png)|
-|![a9.Bluetooth](./screenshot/蓝牙.png)|![b1.硬盘](./screenshot/硬盘.png)|
-|![b2.触摸板](./screenshot/触摸板.png)|![bios-information](./screenshot/bios-information.jpeg)|
-|![bios-configuration](./screenshot/bios-configuration.jpeg)|![bios-boot](./screenshot/bios-boot.jpeg)|
-|![KEXT](./screenshot/KEXT.png)|![drivers64UEFI](./screenshot/drivers64UEFI.png)|
 
 ## 有问题反馈
 *  在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
