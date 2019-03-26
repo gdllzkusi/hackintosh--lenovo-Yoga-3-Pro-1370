@@ -43,7 +43,7 @@
      *  – DPTF  → disable   
    
 ## 四、安装方法    
-  1.  下载[系统镜像)](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) 使用用[TransMac)](http://7dx.pc6.com/wwb5/TransMac114.zip) 将镜像刻录到U盘  
+  1.  下载[系统镜像)](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) 或者最新的[Mojave10.14.4正式版)](https://pan.baidu.com/s/1W4nAOwYZsIvx466faqI6yQ)提取码hans 然后使用[TransMac)](http://7dx.pc6.com/wwb5/TransMac114.zip) 将镜像刻录到U盘  
   2.  使用我的 安装系统使用的EFI（install-EFI）安装系统（无驱动，安装减少报错）   
   4.  第一次使用U盘进去在CLOVER引导界面选择“Boot macOS Install from Install macOS Mojave”安装盘按回车键开始安装，等待跑码结束后进去语言选择界面、然后到 磁盘工具 把你需要安装的硬盘分区 抹除成为APFS格式 名称随便填，抹掉磁盘完成之后回到macOS使用工具界面，选择安装macOS到你刚才抹除的apfs分区。  
   5.  安装过程大概3-5分钟左右，如果你用的不是USB3.0的U盘，那等待时间更多，这个过程主要是把U盘里面的文件拷贝的刚才分区好的硬盘，此时电脑会自动重启，然后选择“Boot macOS Install from MACOS”进行第二阶段安装，注意的是第二阶段安装需要重启两到三次，后面都是选择 “Boot macOS Install from MACOS” 这个选项   
