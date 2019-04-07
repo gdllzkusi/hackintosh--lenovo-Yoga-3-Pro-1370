@@ -47,19 +47,19 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			RF4KGgDT2TGgicpfFvRrbe2Kd0M=
+			i0HJEUXoc+liIwDQUbSd+4I+56U=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"8bf861191c2999c3c13d56cb7e6e8a75e13a4cf0" or cdhash H"445e0a1a00d3d931a089ca5f16f46b6ded8a7743"</string>
+			<string>cdhash H"cf65f2cb273acb660358ff805b900140a777e683" or cdhash H"8b41c91145e873e9622300d051b49dfb823ee7a5"</string>
 		</dict>
 		<key>PlugIns/VoodooI2CServices.kext</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			yk39JcIPM3L1eDgwlGkCh1B8eeY=
+			T0DCsqiqgPbbf20D0IL40836mIw=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"d00a885b99cafe162dca0b24b8818db91165b9e4" or cdhash H"ca4dfd25c20f3372f578383094690287507c79e6"</string>
+			<string>cdhash H"b50fba2aa9e151665c3e14c2a9e54a94a293be68" or cdhash H"4f40c2b2a8aa80f6db7f6d03d082f8d3cdfa988c"</string>
 		</dict>
 		<key>Resources/Common Errors.md</key>
 		<dict>
