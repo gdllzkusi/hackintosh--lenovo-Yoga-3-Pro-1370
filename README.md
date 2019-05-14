@@ -47,6 +47,8 @@
      *  – DPTF  → disable   
    
 ## 四、安装方法    
+#### 本方法适用于UEFI+GPT硬盘启动方式，硬盘格式为MBR请自行寻找方法转换成GPT格式。  
+
   1.  下载[系统镜像)](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/)然后使用[TransMac)](http://7dx.pc6.com/wwb5/TransMac114.zip) 将镜像刻录到U盘  
   2.  使用我的 安装系统使用的EFI（install-EFI）安装系统（无驱动，安装减少报错）   
   4.  第一次使用U盘进去在CLOVER引导界面选择“Boot macOS Install from Install macOS Mojave”安装盘按回车键开始安装，等待跑码结束后进去语言选择界面、然后到 磁盘工具 把你需要安装的硬盘分区 抹除成为APFS格式 名称随便填，抹掉磁盘完成之后回到macOS使用工具界面，选择安装macOS到你刚才抹除的apfs分区。  
