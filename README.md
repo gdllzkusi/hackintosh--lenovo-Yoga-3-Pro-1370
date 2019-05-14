@@ -3,6 +3,8 @@
 #### [Lenovo-Yoga3 14请点击这里查看](https://github.com/gdllzkusi/Lenovo-yoga3-14-hackntiosh)  
 ## 前言
 #### 安装黑苹果有风险，对于本指南中出现的任何变砖，系统崩溃，冻结，故障，损坏或其他问题，本人不承担任何责任。这样做需要您自担风险。 请认真了解hackintosh相关资料后进行安装操作。  
+#### 百度云链接 https://pan.baidu.com/s/1Wq1fYfU7rXLIb5AJuEKqxA 提取码 8hcn  
+
 ## 一、机型配置    
 
 |项目|信息|
