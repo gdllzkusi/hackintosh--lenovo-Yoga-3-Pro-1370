@@ -389,7 +389,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100</string>
+		<string>nv_disable=1 dart=0 kext-dev-mode=1 debug=0x100 -lilubetaall</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -688,6 +688,22 @@
 				<key>Replace</key>
 				<data>
 				igKEwOtC
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>kernel patch (temporarily)﻿﻿</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AIXAD4SHAAAASQ==
+				</data>
+				<key>MatchOS</key>
+				<string>10.15</string>
+				<key>Replace</key>
+				<data>
+				AIXAkJCQkJCQSQ==
 				</data>
 			</dict>
 		</array>
