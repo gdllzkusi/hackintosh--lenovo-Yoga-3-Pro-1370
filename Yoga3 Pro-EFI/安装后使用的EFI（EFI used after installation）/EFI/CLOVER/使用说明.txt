@@ -1,0 +1,5 @@
+config-DVMT(10.12~15).plist  针对于破解bios高级菜单用户使用，一般用户无法使用
+config10.14.3.plist 对应版本10.14.3  
+config10.13.6.plist 对应版本10.13.6
+
+确定自己安装哪个版本，选择对应config文件，重命名成为config.plisr
