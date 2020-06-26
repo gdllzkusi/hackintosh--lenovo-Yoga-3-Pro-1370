@@ -3,6 +3,8 @@
 ## 前言
 #### 安装黑苹果有风险，对于本指南中出现的任何变砖，系统崩溃，冻结，故障，损坏或其他问题，本人不承担任何责任。这样做需要您自担风险。 请认真了解hackintosh相关资料后进行安装操作。  
 #### 目前clover版本的EFI引导较为完善、Opencore版本的引导仍有缺陷（睡眠问题），不建议安装。 
+[EFI下载](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/releases) 
+[所需要的工具](https://github.com/gdllzkusi/hackintosh--lenovo-Yoga-3-Pro-1370/tree/master/resource) 
 ![HD5300](./screenshot/10.15.5.png)    
 ## 一、机型配置    
 
