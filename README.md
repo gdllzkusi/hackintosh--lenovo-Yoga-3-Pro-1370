@@ -34,7 +34,7 @@
 
 ## 三、修改DVMT 
 ####  修改BIOS dvmt ：升级完成后进Windows或者是PE，打开已解压的H2OUVE_100.0.9.2.zip，双击目录下（Windows下管理员运行） 读取参数表.bat ，执行完后会在当前文件夹生成一个名为 vars.txt的文件 搜索内容 Setup 出现以下内容，我们只需要修改 00000180: 这行 倒数第四个将01改成04，然后保存txt文件。再使用 写入参数表.bat 将内容写入BIOS。此时已完成DVMT修改。
- 为什么要改这个值，具体过程可以去远景查看 http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1848651 ，根据教程YOGA3 PRO的BIOS解析出来修改的地址和要修改的值为 0x180c 0x4 
+ 为什么要改这个值，具体过程可以去远景查看 [YOGA900 修改DVMT方法](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1848651)   ，根据说明YOGA3 PRO的BIOS解析出来修改的地址和要修改的值为 0x180c 0x4 
 
 Variable: 0x180c表示该参数存储地址为18行 0c 列（16进制）
 Option: 128M, Value: 0x4 表示128M  DVMT显存对应参数值为4（16进制）
