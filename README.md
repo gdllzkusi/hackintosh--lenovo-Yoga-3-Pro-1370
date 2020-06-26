@@ -3,8 +3,7 @@
 ## 前言
 #### 安装黑苹果有风险，对于本指南中出现的任何变砖，系统崩溃，冻结，故障，损坏或其他问题，本人不承担任何责任。这样做需要您自担风险。 请认真了解hackintosh相关资料后进行安装操作。  
 #### 目前clover版本的EFI引导较为完善、Opencore版本的引导仍有缺陷（睡眠问题），不建议安装。 
-  
-
+![HD5300](./screenshot/10.15.5.png)    
 ## 一、机型配置    
 
 |项目|信息|
@@ -44,17 +43,17 @@ Option: 128M, Value: 0x4 表示128M  DVMT显存对应参数值为4（16进制）
 ## 四、安装方法    
 #### 本方法适用于UEFI+GPT硬盘启动方式，硬盘格式为MBR请自行寻找方法转换成GPT格式。  
 
-  1.  安装并覆盖破解文件至安装目录，使用transMac 将镜像写入至U盘，写盘完成后，使用diskgenius软件即可查看EFI分区，将EFI分区下面的EFI文件夹先删除后替换成我提供的文件 yoga3pro-20200626-clover ，解压后得到EFI文件夹放进去，目录看起来应该是像下图这样。
+*   安装并覆盖破解文件至安装目录，使用transMac 将镜像写入至U盘，写盘完成后，使用diskgenius软件即可查看EFI分区，将EFI分区下面的EFI文件夹先删除后替换成我提供的文件 yoga3pro-20200626-clover ，解压后得到EFI文件夹放进去，目录看起来应该是像下图这样。
   ![diskgenius](./screenshot/diskgenius.png)  
   安装前将BIOS设置如下图，不改的话会导致花屏。
   Boot Mde 改成 legacy support
   Boot Priorty 改成 UEFI First
   ![BIOS设置](./screenshot/BIOSsetup.png)  
   
-    2.  开始安装系统，关机状态下插入外接USB鼠标，镜像盘，找尖锐的东西捅YOGA3 pro 右侧电源指示灯上面的小圆孔按钮（恢复键） 
-    第一次使用U盘进去在CLOVER引导界面选择“Boot macOS Install from Install macOS Mojave”安装盘按回车键开始安装，等待跑码结束后进去语言选择界面、然后到 磁盘工具 把你需要安装的硬盘分区 抹除成为APFS格式 名称随便填，抹掉磁盘完成之后回到macOS使用工具界面，选择安装macOS到你刚才抹除的apfs分区。
-    系统重启后，CLOVER引导界面会多出几个卷标，请选择Boot macOS Install form MAC卷标继续安装  在系统安装过程中，请总是选择Boot macOS Install form MAC卷标继续安装，安装完成后，卷标名称将变更为：Boot macOS form MAC  
-    此时系统安装已经完成，进去设置一些东西，默认下一步即可，注意不要加密磁盘，以及先不要登陆 Apple ID 如有不明白的地方可以查看  
+*  开始安装系统，关机状态下插入外接USB鼠标，镜像盘，找尖锐的东西捅YOGA3 pro 右侧电源指示灯上面的小圆孔按钮（恢复键）
+*  第一次使用U盘进去在CLOVER引导界面选择“Boot macOS Install from Install macOS Mojave”安装盘按回车键开始安装，等待跑码结束后进去语言选择界面、然后到 磁盘工具 把你需要安装的硬盘分区 抹除成为APFS格式 名称随便填，抹掉磁盘完成之后回到macOS使用工具界面，选择安装macOS到你刚才抹除的apfs分区。
+*  系统重启后，CLOVER引导界面会多出几个卷标，请选择Boot macOS Install form MAC卷标继续安装  在系统安装过程中，请总是选择Boot macOS Install form MAC卷标继续安装，安装完成后，卷标名称将变更为：Boot macOS form MAC  
+*  此时系统安装已经完成，进去设置一些东西，默认下一步即可，注意不要加密磁盘，以及先不要登陆 Apple ID 如有不明白的地方可以查看  
     
  [联想小新Air 13黑苹果安装教程](https://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)  
    
