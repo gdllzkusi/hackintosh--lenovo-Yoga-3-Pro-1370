@@ -15,17 +15,17 @@
 			<key>Fixes</key>
 			<dict>
 				<key>AddPNLF</key>
-				<true/>
+				<false/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FakeLPC</key>
 				<false/>
 				<key>FixHPET</key>
-				<true/>
+				<false/>
 				<key>FixIPIC</key>
-				<true/>
+				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
 				<key>FixSBUS</key>
 				<false/>
 				<key>FixShutdown</key>
@@ -39,33 +39,23 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change _DSM to XDSM</string>
+					<string>change _Q38 to XQ38</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>X0RTTQ==</data>
+					<data>X1EzOA==</data>
 					<key>Replace</key>
-					<data>WERTTQ==</data>
+					<data>WFEzOA==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
+					<string>change _Q39 to XQ39</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>R0ZYMA==</data>
+					<data>X1EzOQ==</data>
 					<key>Replace</key>
-					<data>SUdQVQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change B0D3 to HDAU</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>QjBEMw==</data>
-					<key>Replace</key>
-					<data>SERBVQ==</data>
+					<data>WFEzOQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -76,36 +66,6 @@
 					<data>R1BSVwI=</data>
 					<key>Replace</key>
 					<data>WFBSVwI=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(ESEL,0,S) to ESEZ, pair with SSDT-ESEL.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RVNFTAg=</data>
-					<key>Replace</key>
-					<data>RVNFWgg=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(XSEL,0,S) to XSEZ, pair with SSDT-XSEL.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>WFNFTAg=</data>
-					<key>Replace</key>
-					<data>WFNFWgg=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(XWAK,0,S) to ZWAK, pair with SSDT-XWAK.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>WFdBSwg=</data>
-					<key>Replace</key>
-					<data>WldBSwg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -126,46 +86,6 @@
 					<data>X1BUUwE=</data>
 					<key>Replace</key>
 					<data>WlBUUwE=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change SAT0 to SATA, optionally pair with SSDT-SATA.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>U0FUMA==</data>
-					<key>Replace</key>
-					<data>U0FUQQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC2 to EH02, optionally pair with SSDT-EH02.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMg==</data>
-					<key>Replace</key>
-					<data>RUgwMg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC1 to EH01, optionally pair with SSDT-EH01.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMQ==</data>
-					<key>Replace</key>
-					<data>RUgwMQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _OSI to XOSI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X09TSQ==</data>
-					<key>Replace</key>
-					<data>WE9TSQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -216,56 +136,6 @@
 					<data>U01URgE=</data>
 					<key>Replace</key>
 					<data>WE1URgE=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMQ==</data>
-					<key>Replace</key>
-					<data>RUgwMQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMg==</data>
-					<key>Replace</key>
-					<data>RUgwMg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change XHCI to XHC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>WEhDSQ==</data>
-					<key>Replace</key>
-					<data>WEhDXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _Q38 to XQ38</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1EzOA==</data>
-					<key>Replace</key>
-					<data>WFEzOA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _Q39 to XQ39</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1EzOQ==</data>
-					<key>Replace</key>
-					<data>WFEzOQ==</data>
 				</dict>
 			</array>
 			<key>SlpSmiAtWake</key>
@@ -482,12 +352,10 @@
 	<dict>
 		<key>EDID</key>
 		<dict>
-			<key>Custom</key>
-			<data>AP///////wBMg0pDAAAAAAAYAQOlHRF46rWVk1hWjSkfUFQAAAABAQEBAQEBAQEBAQEBAQEBI42AdMAIEHAwICUAJaUQAAAZI42A4MEI9XAwICUAJaUQAAAZAAAA/gBTQU1TVU5HCiBMg1lMAAAA/gBMVE4xMzNZTDAzTDAxAGk=</data>
 			<key>HorizontalSyncPulseWidth</key>
 			<string>0x032</string>
 			<key>Inject</key>
-			<true/>
+			<false/>
 			<key>ProductID</key>
 			<string>0x434a</string>
 			<key>VendorID</key>
@@ -630,8 +498,6 @@
 		<string>Mac-BE0E8AC46FE800CC</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C02539902CDFV36UE</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -658,10 +524,6 @@
 		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBook8,1</string>
-		<key>SerialNumber</key>
-		<string>C02QGFZ4GCN3</string>
-		<key>SmUUID</key>
-		<string>DB3B6068-10CF-4F29-806F-588FF7452DC3</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
