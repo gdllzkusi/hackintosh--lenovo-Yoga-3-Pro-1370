@@ -1,0 +1,138 @@
+Insyde H2OUVE (UEFI Variable Editor) Release Note
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.02
+--------------------------------------------------------------------------------
+1. Support "-gk" to generate hot key setting.
+2. Support multi-config hot key feature.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.01
+--------------------------------------------------------------------------------
+1. Do not produce an additional console window but use the original one.
+2. The help content is read form ReadMe.txt.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.00
+--------------------------------------------------------------------------------
+1. Support to modify strings of setup utility or setup browser.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.09
+--------------------------------------------------------------------------------
+1. Fix the behaviors of the functions in Exit page of SCU HTML.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.08
+--------------------------------------------------------------------------------
+1. Fix bug that modifying boot type order from SCU HTML will not modify boot order.
+2. If OEM data which classify boot device to boot type does not exit, to modify boot type order is not supported.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.07
+--------------------------------------------------------------------------------
+1. Fix bug that the prompt warning message of "SaveToRom" has no rejective button.
+2. Fix bug that changing boot device priority with patch text does not re-order the boot order.
+3. Add automation ID in setup.xlst.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.06
+--------------------------------------------------------------------------------
+1. Use name to stand for boot type order from string package.
+2. Add "-fea" to display if features are supported.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.05
+--------------------------------------------------------------------------------
+1. Change the argument type of modifying boot type order from boot type ID to boot type name.
+2. Fix generated default from BIOS image of version 5.0 contains abnormal numeric options, which might cause saving a abnormal image.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.04
+--------------------------------------------------------------------------------
+1. Fix abnormal security page in html view of scu or default.
+2. Fix a crash bug.
+3. Fix a misjudgement of unmatch numeric value when saving scu from a text file.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.03
+--------------------------------------------------------------------------------
+1. Remove dependency on VC++ 2008 Distributable.
+2. Fix some crash bugs.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.02
+--------------------------------------------------------------------------------
+1. Fix stack corruption when OpCodeStack is too small.
+2. Fix parsing checkbox op code results in incorrect stack.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.01
+--------------------------------------------------------------------------------
+1. Fix the bug IFR not found when in pure UEFI by add ReadIFRFromVariable
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.00
+--------------------------------------------------------------------------------
+1. Rename the tool and the package.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.07.04
+--------------------------------------------------------------------------------
+1. Add editor of multi-config default (command line).
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.07.03
+--------------------------------------------------------------------------------
+1. Renew HTML of SCU editor
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.07.02 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Fix bug:
+1. Fix crash if ROM size is not standard. e.g. 6M.
+2. Fix failure in "-sd" or "-ss" if the input text is not ended with a new-line.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.07.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. "-ms" is able to modify "Set Supervisor Password" and "Set User Password".
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.06.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. Add output "boot type order" by "-gs".
+2. Add usage of "-ss" to modify "boot type order".
+3. Add usage of "-ms" to modify "boot order".
+4. Add usage of "-ms" to modify "boot type order".
+5. Add compatibility checking by comparing options' attribute when executing "-ss" or "-sd".
+6. "-ms" is able to modify action string by executing callback ID.
+7. "-gs" generate additional password information.
+8. "-ss" is able to modify password.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.05.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. Add execution of Callback ID to enable modification of SCU options, especially for BMC relative options.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.04.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. Modify usage of "-gs" adding "-all" to generate a file with suppress and grayout setting or not.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.03.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. version number updated
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.02.04 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. Support Window(GUI) mode and command line mode
+2. 3 editors : scu editor, image setup editor and variable editor
