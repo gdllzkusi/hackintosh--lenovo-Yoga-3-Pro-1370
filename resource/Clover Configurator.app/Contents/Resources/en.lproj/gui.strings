@@ -17,6 +17,9 @@
 /* Class = "NSTableColumn"; headerCell.title = "Hotkey"; ObjectID = "1Pu-Ra-p5M"; */
 "1Pu-Ra-p5M.headerCell.title" = "Hotkey";
 
+/* Class = "NSTabViewItem"; label = "Custom Legacy"; ObjectID = "2P9-YE-7hG"; */
+"2P9-YE-7hG.label" = "Custom Legacy";
+
 /* Class = "NSButton"; ibShadowedToolTip = "<key>Scan</key>\n<dict>\n  <key>Tool</key>\n  <true/>\n</dict>\nEnable or disable the automatic UEFI tool scan."; ObjectID = "31b-eE-tBc"; */
 "31b-eE-tBc.ibShadowedToolTip" = "<key>Scan</key>\n<dict>\n  <key>Tool</key>\n  <true/>\n</dict>\nEnable or disable the automatic UEFI tool scan.";
 
@@ -52,6 +55,9 @@
 
 /* Class = "NSBox"; title = "Box"; ObjectID = "7pV-KZ-BSf"; */
 "7pV-KZ-BSf.title" = "Box";
+
+/* Class = "NSButton"; ibShadowedToolTip = "<key>ShowOptimus</key>\n<true/>\n\nSome bioses can turn off/on NVidia Optimus cards.\nTurning it on you will notice that in GUI at boot time."; ObjectID = "8Qa-Zq-WeQ"; */
+"8Qa-Zq-WeQ.ibShadowedToolTip" = "<key>ShowOptimus</key>\n<true/>\n\nSome bioses can turn off/on NVidia Optimus cards.\nTurning it on you will notice that in GUI at boot time.";
 
 /* Class = "NSTextFieldCell"; title = "DriveImage"; ObjectID = "94H-gv-m1X"; */
 "94H-gv-m1X.title" = "DriveImage";
@@ -130,6 +136,9 @@
 
 /* Class = "NSTextFieldCell"; title = "Hotkey"; ObjectID = "Rc2-f3-UEG"; */
 "Rc2-f3-UEG.title" = "Hotkey";
+
+/* Class = "NSButtonCell"; title = "ProvideConsoleGop"; ObjectID = "RpG-OS-R6v"; */
+"RpG-OS-R6v.title" = "ProvideConsoleGop";
 
 /* Class = "NSButtonCell"; title = "Linux"; ObjectID = "RqN-qE-FSF"; */
 "RqN-qE-FSF.title" = "Linux";
@@ -211,9 +220,6 @@
 
 /* Class = "NSTextField"; ibShadowedToolTip = "DriveImage - Path to a custom drive image file. Search path is root directory of entry volume, \n\t     theme directory, clover directory, clover volume root directory, and finally os icon names."; ObjectID = "do1-vv-GsU"; */
 "do1-vv-GsU.ibShadowedToolTip" = "DriveImage - Path to a custom drive image file. Search path is root directory of entry volume, \n\t     theme directory, clover directory, clover volume root directory, and finally os icon names.";
-
-/* Class = "NSBox"; title = "Custom Tool"; ObjectID = "dpl-Qa-42U"; */
-"dpl-Qa-42U.title" = "Custom Tool";
 
 /* Class = "NSSegmentedControl"; ibShadowedToolTip = "Enable or disable all automatic scans."; ObjectID = "eIP-dU-U5E"; */
 "eIP-dU-U5E.ibShadowedToolTip" = "Enable or disable all automatic scans.";
@@ -305,9 +311,6 @@
 /* Class = "NSTableColumn"; headerCell.title = "Type*"; ObjectID = "quU-uS-ASm"; */
 "quU-uS-ASm.headerCell.title" = "Type*";
 
-/* Class = "NSBox"; title = "Custom Legacy"; ObjectID = "qvW-Ar-LM7"; */
-"qvW-Ar-LM7.title" = "Custom Legacy";
-
 /* Class = "NSButton"; ibShadowedToolTip = "<key>ShowOptimus</key>\n<true/>\n\nSome bioses can turn off/on NVidia Optimus cards.\nTurning it on you will notice that in GUI at boot time."; ObjectID = "rRi-4x-lO8"; */
 "rRi-4x-lO8.ibShadowedToolTip" = "<key>ShowOptimus</key>\n<true/>\n\nSome bioses can turn off/on NVidia Optimus cards.\nTurning it on you will notice that in GUI at boot time.";
 
@@ -325,6 +328,9 @@
 
 /* Class = "NSTextFieldCell"; title = "EmbeddedThemeType"; ObjectID = "tIB-5J-Ffe"; */
 "tIB-5J-Ffe.title" = "EmbeddedThemeType";
+
+/* Class = "NSTabViewItem"; label = "Custom Tool"; ObjectID = "ujG-Yr-D2c"; */
+"ujG-Yr-D2c.label" = "Custom Tool";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Sync and Async sound play.\n\nSync play - sound play before enter Clover GUI. Clover GUI started after the sound is finished.\n\nAsync play - sound started to play before Clover GUI started and continue playing when GUI is ready.\n\nTo switch edit config.plist\n\n\t<key>GUI</key>\n\t<dict>\n\t\t<key>PlayAsync</key>\n\t\t<false/>"; ObjectID = "vWG-oJ-ht5"; */
 "vWG-oJ-ht5.ibShadowedToolTip" = "Sync and Async sound play.\n\nSync play - sound play before enter Clover GUI. Clover GUI started after the sound is finished.\n\nAsync play - sound started to play before Clover GUI started and continue playing when GUI is ready.\n\nTo switch edit config.plist\n\n\t<key>GUI</key>\n\t<dict>\n\t\t<key>PlayAsync</key>\n\t\t<false/>";

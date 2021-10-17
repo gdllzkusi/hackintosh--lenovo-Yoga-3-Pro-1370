@@ -2,6 +2,12 @@
 /* Class = "NSButtonCell"; title = "SyncRuntimePermissions"; ObjectID = "1MM-hq-HB3"; */
 "1MM-hq-HB3.title" = "SyncRuntimePermissions";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.4\nDescription: Disables primary checksum (0x58-0x59) writing in AppleRTC.\n\nNote 1: This option will not protect other areas from being overwritten, see RTCMemoryFixup kernel extension if this is desired.\n\nNote 2: This option will not protect areas from being overwritten at firmware stage (e.g. macOS bootloader), see AppleRtcRam protocol description if this is desired."; ObjectID = "1fz-2E-QvW"; */
+"1fz-2E-QvW.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.4\nDescription: Disables primary checksum (0x58-0x59) writing in AppleRTC.\n\nNote 1: This option will not protect other areas from being overwritten, see RTCMemoryFixup kernel extension if this is desired.\n\nNote 2: This option will not protect areas from being overwritten at firmware stage (e.g. macOS bootloader), see AppleRtcRam protocol description if this is desired.";
+
+/* Class = "NSButtonCell"; title = "XhciPortLimit"; ObjectID = "24X-1N-KQI"; */
+"24X-1N-KQI.title" = "XhciPortLimit";
+
 /* Class = "NSTableColumn"; headerCell.title = "Comment"; ObjectID = "24c-2L-Ti5"; */
 "24c-2L-Ti5.headerCell.title" = "Comment";
 
@@ -11,8 +17,14 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nDescription: This quirk is useful on Mac firmwares, which behave differently in different OS."; ObjectID = "54b-nc-0r7"; */
 "54b-nc-0r7.ibShadowedToolTip" = "Default Value: False\nDescription: This quirk is useful on Mac firmwares, which behave differently in different OS.";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.4\nDescription: Apply icon type patches to IOAHCIPort.kext to force internal disk icons for all AHCI disks.\nNote: This option should be avoided whenever possible. Modern firmwares usually have compatible AHCI controllers."; ObjectID = "7rc-6Q-7yN"; */
+"7rc-6Q-7yN.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.4\nDescription: Apply icon type patches to IOAHCIPort.kext to force internal disk icons for all AHCI disks.\nNote: This option should be avoided whenever possible. Modern firmwares usually have compatible AHCI controllers.";
+
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nDescription: Protect UEFI Secure Boot variables from being written."; ObjectID = "7sq-Tw-PeE"; */
 "7sq-Tw-PeE.ibShadowedToolTip" = "Default Value: False\nDescription: Protect UEFI Secure Boot variables from being written.";
+
+/* Class = "NSButtonCell"; title = "DisableLinkeditJettison"; ObjectID = "7y7-H3-bM3"; */
+"7y7-H3-bM3.title" = "DisableLinkeditJettison";
 
 /* Class = "NSButtonCell"; title = "ProvideConsoleGopEnable"; ObjectID = "87W-gf-A7d"; */
 "87W-gf-A7d.title" = "ProvideConsoleGopEnable";
@@ -26,17 +38,35 @@
 /* Class = "NSButtonCell"; title = "EnableWriteUnprotector"; ObjectID = "9h1-1c-Fkv"; */
 "9h1-1c-Fkv.title" = "EnableWriteUnprotector";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.4\nDescription: Disables AppleIntelCpuPowerManagement.\n\nNote: This option is a preferred alternative to NullCpuPowerManagement.kext for CPUs without native power management driver in macOS."; ObjectID = "A2g-GW-bZE"; */
+"A2g-GW-bZE.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.4\nDescription: Disables AppleIntelCpuPowerManagement.\n\nNote: This option is a preferred alternative to NullCpuPowerManagement.kext for CPUs without native power management driver in macOS.";
+
 /* Class = "NSTextField"; ibShadowedToolTip = "Default Value: 0\nDescription: Overrides the maximum slide instead of 256 when ProvideCustomSlide is enabled."; ObjectID = "CQd-k2-1mU"; */
 "CQd-k2-1mU.ibShadowedToolTip" = "Default Value: 0\nDescription: Overrides the maximum slide instead of 256 when ProvideCustomSlide is enabled.";
 
+/* Class = "NSButtonCell"; title = "IncreasePciBarSize"; ObjectID = "Cap-os-5di"; */
+"Cap-os-5di.title" = "IncreasePciBarSize";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nRequirement: 10.15 (not required for older)\nDescription: Disables kernel panic on setPowerState timeout.\nAn additional security measure was added to macOS Catalina (10.15) causing kernel panic on power change timeout for Apple drivers. Sometimes it may cause issues on misconfigured hardware, notably digital audio, which sometimes fails to wake up. For debug kernels setpowerstate_panic=0 boot argument should be used, which is otherwise equivalent to this quirk."; ObjectID = "Dud-nf-a9u"; */
+"Dud-nf-a9u.ibShadowedToolTip" = "Default Value: True\nRequirement: 10.15 (not required for older)\nDescription: Disables kernel panic on setPowerState timeout.\nAn additional security measure was added to macOS Catalina (10.15) causing kernel panic on power change timeout for Apple drivers. Sometimes it may cause issues on misconfigured hardware, notably digital audio, which sometimes fails to wake up. For debug kernels setpowerstate_panic=0 boot argument should be used, which is otherwise equivalent to this quirk.";
+
 /* Class = "NSButtonCell"; title = "DiscardHibernateMap"; ObjectID = "EDD-nJ-q38"; */
 "EDD-nJ-q38.title" = "DiscardHibernateMap";
+
+/* Class = "NSButtonCell"; title = "AppleXcpmForceBoost"; ObjectID = "EHG-QX-xdN"; */
+"EHG-QX-xdN.title" = "AppleXcpmForceBoost";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Force macOS to use a pseudorandom value among available slide values."; ObjectID = "FQL-vw-xmL"; */
 "FQL-vw-xmL.ibShadowedToolTip" = "Default Value: True\nDescription: Force macOS to use a pseudorandom value among available slide values.";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Install Graphics Output Protocol if missing from the console handle."; ObjectID = "G37-Vn-z58"; */
 "G37-Vn-z58.ibShadowedToolTip" = "Default Value: True\nDescription: Install Graphics Output Protocol if missing from the console handle.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nRequirement: 10.8 (not required for older)\nDescription: Disables IOMapper support in XNU (VT-d), which may conflict with the firmware implementation.\nNote: This option is a preferred alternative to dropping DMAR ACPI table and disabling VT-d in firmware preferences, which does not break VT-d support in other systems in case they need it."; ObjectID = "GEn-8P-60k"; */
+"GEn-8P-60k.ibShadowedToolTip" = "Default Value: True\nRequirement: 10.8 (not required for older)\nDescription: Disables IOMapper support in XNU (VT-d), which may conflict with the firmware implementation.\nNote: This option is a preferred alternative to dropping DMAR ACPI table and disabling VT-d in firmware preferences, which does not break VT-d support in other systems in case they need it.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.10\nDescription: Increases 32-bit PCI bar size in IOPCIFamily from 1 to 4 GBs.\nNote: This option should be avoided whenever possible. In general the necessity of this option means misconfigured or broken firmware."; ObjectID = "N1z-8X-VF9"; */
+"N1z-8X-VF9.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.10\nDescription: Increases 32-bit PCI bar size in IOPCIFamily from 1 to 4 GBs.\nNote: This option should be avoided whenever possible. In general the necessity of this option means misconfigured or broken firmware.";
 
 /* Class = "NSTextFieldCell"; title = "ProvideMaxSlide"; ObjectID = "NNR-wp-96c"; */
 "NNR-wp-96c.title" = "ProvideMaxSlide";
@@ -62,8 +92,23 @@
 /* Class = "NSButtonCell"; title = "EnableSafeModeSlide"; ObjectID = "W3J-6N-sTe"; */
 "W3J-6N-sTe.title" = "EnableSafeModeSlide";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nRequirement: 11.0\nDescription: Disables __LINKEDIT jettison code.\n\nThis option lets Lilu.kext and possibly some others function in macOS Big Sur with best performance without keepsyms=1 boot argument."; ObjectID = "WlQ-9W-Qvi"; */
+"WlQ-9W-Qvi.ibShadowedToolTip" = "Default Value: True\nRequirement: 11.0\nDescription: Disables __LINKEDIT jettison code.\n\nThis option lets Lilu.kext and possibly some others function in macOS Big Sur with best performance without keepsyms=1 boot argument.";
+
 /* Class = "NSTableColumn"; headerCell.title = "Enabled"; ObjectID = "X5r-8w-RLg"; */
 "X5r-8w-RLg.headerCell.title" = "Enabled";
+
+/* Class = "NSButtonCell"; title = "DummyPowerManagement"; ObjectID = "X7P-Kf-QpS"; */
+"X7P-Kf-QpS.title" = "DummyPowerManagement";
+
+/* Class = "NSButtonCell"; title = "DisableIoMapper"; ObjectID = "XA3-EU-yxY"; */
+"XA3-EU-yxY.title" = "DisableIoMapper";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.8 (not required for older)\nDescription: Forces maximum performance in XCPM mode.\nThis patch writes 0xFF00 to MSR_IA32_PERF_CONTROL (0x199), effectively setting maximum multiplier for all the time.\nNote: While this may increase the performance, this patch is strongly discouraged on all systems but those explicitly dedicated to scientific or media calculations. In general only certain Xeon models benefit from the patch."; ObjectID = "YDn-2i-DcY"; */
+"YDn-2i-DcY.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.8 (not required for older)\nDescription: Forces maximum performance in XCPM mode.\nThis patch writes 0xFF00 to MSR_IA32_PERF_CONTROL (0x199), effectively setting maximum multiplier for all the time.\nNote: While this may increase the performance, this patch is strongly discouraged on all systems but those explicitly dedicated to scientific or media calculations. In general only certain Xeon models benefit from the patch.";
+
+/* Class = "NSButtonCell"; title = "ExternalDiskIcons"; ObjectID = "YJl-8j-BQg"; */
+"YJl-8j-BQg.title" = "ExternalDiskIcons";
 
 /* Class = "NSButtonCell"; title = "ProtectSecureBoot"; ObjectID = "ZW3-YR-DtS"; */
 "ZW3-YR-DtS.title" = "ProtectSecureBoot";
@@ -83,8 +128,20 @@
 /* Class = "NSButtonCell"; title = "ProtectUefiServices"; ObjectID = "gT2-fT-bnz"; */
 "gT2-fT-bnz.title" = "ProtectUefiServices";
 
+/* Class = "NSButtonCell"; title = "ThirdPartyDrives"; ObjectID = "ibe-5x-fBs"; */
+"ibe-5x-fBs.title" = "ThirdPartyDrives";
+
+/* Class = "NSButtonCell"; title = "DisableRtcChecksum"; ObjectID = "kBK-Wk-gUG"; */
+"kBK-Wk-gUG.title" = "DisableRtcChecksum";
+
 /* Class = "NSTabViewItem"; label = "MmioWhitelist"; ObjectID = "ldJ-oO-4GL"; */
 "ldJ-oO-4GL.label" = "MmioWhitelist";
+
+/* Class = "NSButtonCell"; title = "PowerTimeoutKernelPanic"; ObjectID = "mtQ-xf-bHv"; */
+"mtQ-xf-bHv.title" = "PowerTimeoutKernelPanic";
+
+/* Class = "NSButtonCell"; title = "AppleXcpmExtraMsrs"; ObjectID = "myp-PT-S2O"; */
+"myp-PT-S2O.title" = "AppleXcpmExtraMsrs";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Fix UEFI runtime services support on many firmwares."; ObjectID = "nWp-Pt-o5E"; */
 "nWp-Pt-o5E.ibShadowedToolTip" = "Default Value: True\nDescription: Fix UEFI runtime services support on many firmwares.";
@@ -116,8 +173,29 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Patch the bootloader to enable KASLR in safe mode."; ObjectID = "rNN-c0-ymd"; */
 "rNN-c0-ymd.ibShadowedToolTip" = "Default Value: True\nDescription: Patch the bootloader to enable KASLR in safe mode.";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nRequirement: 10.11 (not required for older)\nDescription: Patch various kexts (AppleUSBXHCI.kext, AppleUSBXHCIPCI.kext, IOUSBHostFamily.kext) to remove USB port count limit of 15 ports.\nNote: This option should avoided whenever possible. USB port limit is imposed by the amount of used bits in locationID format and there is no possible way to workaround this without heavy OS modification. The only valid solution is to limit the amount of used ports to 15 (discarding some)."; ObjectID = "sun-oo-HP0"; */
+"sun-oo-HP0.ibShadowedToolTip" = "Default Value: True\nRequirement: 10.11 (not required for older)\nDescription: Patch various kexts (AppleUSBXHCI.kext, AppleUSBXHCIPCI.kext, IOUSBHostFamily.kext) to remove USB port count limit of 15 ports.\nNote: This option should avoided whenever possible. USB port limit is imposed by the amount of used bits in locationID format and there is no possible way to workaround this without heavy OS modification. The only valid solution is to limit the amount of used ports to 15 (discarding some).";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.6 (not required for older)\nDescription: Apply vendor patches to IOAHCIBlockStorage.kext to enable native features for third-party drives, such as TRIM on SSDs or hibernation support on 10.15 and newer.\nNote: This option may be avoided on user preference. NVMe SSDs are compatible without the change. For AHCI SSDs on modern macOS version there is a dedicated built-in utility called trimforce. Starting from 10.15 this utility creates EnableTRIM variable in APPLE_BOOT_VARIABLE_GUID namespace with 01 00 00 00 value."; ObjectID = "tJF-zk-Mgd"; */
+"tJF-zk-Mgd.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.6 (not required for older)\nDescription: Apply vendor patches to IOAHCIBlockStorage.kext to enable native features for third-party drives, such as TRIM on SSDs or hibernation support on 10.15 and newer.\nNote: This option may be avoided on user preference. NVMe SSDs are compatible without the change. For AHCI SSDs on modern macOS version there is a dedicated built-in utility called trimforce. Starting from 10.15 this utility creates EnableTRIM variable in APPLE_BOOT_VARIABLE_GUID namespace with 01 00 00 00 value.";
+
+/* Class = "NSTextFieldCell"; title = "KernelCache"; ObjectID = "tzk-nw-rw9"; */
+"tzk-nw-rw9.title" = "KernelCache";
+
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nDescription: A security option to ignore single user mode arguments."; ObjectID = "vYQ-4C-eVz"; */
 "vYQ-4C-eVz.ibShadowedToolTip" = "Default Value: False\nDescription: A security option to ignore single user mode arguments.";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.8 (not required for older)\nDescription: Disables multiple MSR access critical for select CPUs, which have no native XCPM support.\nThis is normally used in conjunction with Emulate section on Haswell-E, Broadwell-E, Skylake-SP, and similar CPUs.\nNote: Additional not provided patches will be required for Ivy Bridge or Pentium CPUs. It is recommended to use AppleIntelCpuPowerManagement.kext for the former."; ObjectID = "vif-sm-EZD"; */
+"vif-sm-EZD.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.8 (not required for older)\nDescription: Disables multiple MSR access critical for select CPUs, which have no native XCPM support.\nThis is normally used in conjunction with Emulate section on Haswell-E, Broadwell-E, Skylake-SP, and similar CPUs.\nNote: Additional not provided patches will be required for Ivy Bridge or Pentium CPUs. It is recommended to use AppleIntelCpuPowerManagement.kext for the former.";
+
+/* Class = "NSPopUpButton"; ibShadowedToolTip = "Default Value: Auto\nDescription: Prefer specified kernel cache type (Auto, Cacheless, Mkext, Prelinked) when available.\n\nDifferent variants of macOS support different kernel caching variants designed to improve boot performance.\nThis setting prevents the use of faster kernel caching variants if slower variants are available for debugging and stability reasons. I.e., by specifying Mkext, Prelinked will be disabled for e.g. 10.6 but not for 10.7."; ObjectID = "vsM-2r-sbr"; */
+"vsM-2r-sbr.ibShadowedToolTip" = "Default Value: Auto\nDescription: Prefer specified kernel cache type (Auto, Cacheless, Mkext, Prelinked) when available.\n\nDifferent variants of macOS support different kernel caching variants designed to improve boot performance.\nThis setting prevents the use of faster kernel caching variants if slower variants are available for debugging and stability reasons. I.e., by specifying Mkext, Prelinked will be disabled for e.g. 10.6 but not for 10.7.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Use kernelcache with different checksums when available.\n\nOn macOS 10.6 and earlier kernelcache filename has a checksum, which essentially is adler32 from SMBIOS product name and EfiBoot device path. On certain firmwares EfiBoot device path differs between UEFI and macOS due to ACPI or hardware specifics, rendering kernelcache checksum as always different.\nThis setting allows matching the latest kernelcache with a suitable architecture when the kernelcache without suffix is unavailable, improving macOS 10.6 boot performance on several platforms."; ObjectID = "vts-L4-omp"; */
+"vts-L4-omp.ibShadowedToolTip" = "Default Value: True\nDescription: Use kernelcache with different checksums when available.\n\nOn macOS 10.6 and earlier kernelcache filename has a checksum, which essentially is adler32 from SMBIOS product name and EfiBoot device path. On certain firmwares EfiBoot device path differs between UEFI and macOS due to ACPI or hardware specifics, rendering kernelcache checksum as always different.\nThis setting allows matching the latest kernelcache with a suitable architecture when the kernelcache without suffix is unavailable, improving macOS 10.6 boot performance on several platforms.";
+
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Generate Memory Map compatible with macOS."; ObjectID = "wVb-7V-a4H"; */
 "wVb-7V-a4H.ibShadowedToolTip" = "Default Value: True\nDescription: Generate Memory Map compatible with macOS.";
+
+/* Class = "NSButtonCell"; title = "FuzzyMatch"; ObjectID = "zTF-In-q11"; */
+"zTF-In-q11.title" = "FuzzyMatch";
